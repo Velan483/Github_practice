@@ -1,0 +1,46 @@
+<html>
+    <head><title>Marksheet</title></head>
+<center>
+    <script>
+        function color(){
+            x=document.getElementById('a').style.color="green"
+            x=document.getElementById('a').style.fontSize="100px"
+        }
+        function mark(){
+            n=document.getElementById('n1').value
+            g=document.getElementById('b').value
+            d=document.getElementById('c').value
+            m1=document.getElementById('d').value
+            m2=document.getElementById('e').value
+            m3=document.getElementById('f').value
+            m1=parseInt(m1)
+            m2=parseInt(m2)
+            m3=parseInt(m3)
+            document.writeln("Student Name :"+n );
+            document.writeln("<br>");
+            document.writeln("Gender :"+g );
+            document.writeln("<br>");
+            document.writeln("Department :"+d );
+            document.writeln("<br>");
+            total=m1+m2+m3
+            document.writeln("Total :"+total);
+            document.writeln("<br>");
+            avg=total/3
+            document.writeln("Average :"+avg);
+        }
+    </script>
+    </center>
+    <body>
+        <p id="a">Hai velan</p>
+        <button onclick=color()>Change color</button>
+        <hr>
+         Name : <input type="text" id="n1"> <br><br>
+         gender : <input type="text" id="b"><br> <br>
+         Dept     :   <input type="text" id="c"><br> <br>
+         Mark 1 : <input type="nuumber" id="d"><br> <br>
+         Mark 2 : <input type="nuumber" id="e"><br> <br>
+         Mark 3 : <input type="nuumber" id="f"><br> <br>
+         <button onclick=mark()>Result</button>
+    
+    </body>
+</html>

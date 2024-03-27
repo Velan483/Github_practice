@@ -1,0 +1,90 @@
+<html>
+    <head><title>Email Form</title>
+    <style>
+    input{
+        padding: 10px;
+    }
+    select{
+        padding: 10px;
+        width:192px
+    }
+</style>
+ <script>
+    function validation(){
+        if (document.f1.name.value==""){
+           window.alert("please enter the name");
+           return false; 
+        }
+        else if(document.f1.email.value==""){
+           window.alert("Please enter Email-id");
+           return false;
+         }
+        else if(document.f1.email.value.indexOf("@gmail.com")==-1){
+            window.alert("please enter valid Email-id ");
+            return false;
+        }
+        else if(document.f1.address.value==""){
+            window.alert("please enter address");
+        }
+        else if(document.f1.country.selectedIndex==0){
+            window.alert("please enter your country"); 
+        }
+        else if((document.f1.gender[0].checked==false)&&(document.f1.gender[1].checked==false)){
+            window.alert("please select your gender");
+
+        }
+        else if((document.f1.qua[0].checked==false)&&(document.f1.qua[1].checked==false)){
+            window.alert("please select your qualification ");
+        }
+        
+    }
+   
+</script>
+    </head>
+    <body>
+        
+
+        <form action="welcome.html" name="f1" onsubmit="validation()">
+        <table border="1">
+            <tr>
+                <td>Name : </td>
+                <td><input type="text" name="name"  placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="text" name="email" placeholder="Enter Email"></td>
+            </tr>
+            <tr>
+                <td>Country : </td>
+                <td><select name="country" id="country" >
+                    <option value="none">Select</option>
+                    <option value="america">America</option>
+                    <option value="china">china</option>
+                    <option value="russia">Russia</option>
+                    <option value="india">India</option>
+                    <option value="japan">Japan</option>
+                    <option value="canada">canada</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea placeholder="Enter Address" name="address" id="address" cols="23" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                </td>
+            </tr>
+           
+            <tr><td>Qualification:</td>
+            <td><input type="checkbox" name="qua">BE <br>
+                <input type="checkbox" name="qua">ME <br>
+                <input type="checkbox" name="qua">Btech <br>
+                <input type="checkbox" name="qua">MBA <br>
+                <input type="checkbox" name="qua">MCA</td></tr>
+            </table> <br>
+            <input type="submit" value="Submit" name="sub" >
+    </form>
+    </body>
+</html>

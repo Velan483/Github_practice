@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head> 
+        <title>Addition</title>
+        <script>
+            function add(){
+            var a=document.getElementById("a1").value
+            var b=document.getElementById("b1").value
+            c=parseInt(a)+parseInt(b)
+            alert(c)
+            }
+            function even(){
+            var a=document.getElementById("c1").value
+            for(i=1;i<=a;i++){
+                
+                if(i%2==0)
+                    alert("Even :"+i)
+                }
+
+            for(i=1;i<=a;i++){
+                if(i%2!=0)
+                    alert("Odd :"+i)
+                }
+            
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        Enter Number : <input type="text" id="a1" > <br> <br>
+        Enter Number : <input type="text" id="b1" >
+       <br> <br>
+       <input type="button" value="Add" onclick=add()> 
+       <hr>
+       Enter Number : <input type="text" id="c1"> <br> <br>
+       <input type="button" value="EvenOdd" onclick=even()>
+       
+               
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script>
+            function fruit(){
+            var n=document.getElementsByTagName("li");
+            alert("Total Fruits :"+n.length);}
+            function color(){
+                var n=document.getElementsByClassName("h1");
+                var i;
+                for(i=0;i<n.length;i++){
+                    n[i].style.color="crimson"
+                }
+            }
+            function change(){
+                var s=document.getElementsByClassName("a");
+                var i
+                for(i=0;i<s.length;i++){
+                s[i].style.color="blue";
+                s[i].style.fontSize="25px";
+                s[i].style.fontFamily="Impact,Charcoal,sans-serif";
+                }
+               
+            }
+            function replace(){
+                n=document.getElementById("b"),
+                n.innerHTML="Hello guys (*_*)";
+                n.style.color="orange";
+                n.fontWeight="900";  
+                s=document.getElementById("c");
+                console.log(s.innerHTML);
+                console.log(s.innerText);
+             }
+            function photo(){
+                a=document.getElementById("photo").src="vela.jpg";
+            }
+            function onmouse(){
+                a=document.getElementById("mouse").style.color="green";
+                a=document.getElementById("mouse").style.fontSize="30px";
+                b=document.getElementById("focus").style.outlineColor="red";
+                
+            }
+            function onld(){
+                window.alert("welcome");
+            }
+        </script>
+
+
+    </head>
+    <body  onload="onld()">
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Pineaple</li>
+            <li>Guva</li>
+            <li>Orange</li>
+            <li>Jackfruit</li>
+        </ul>
+        <input type="button" onclick="fruit()" value="Fruits count">
+        <hr>
+        <h1 class="h1">Hello</h1>
+        <h2 class="h1">Hello</h2>
+        <h3 class="h1">Hello</h3>
+        <input type="button" value="change color" onclick="color()">
+        <hr>
+        <h1 class="a">Check Heading</h1>
+        <p class="a">Wow it is a nice test</p>
+        <input type="button" class="a" value="Change" onclick="change()">
+        <hr>
+        <h1>innerHTML innerText</h1>
+        <p id="b">Hello buddy !!!!</p>
+        <p id ="c">hello boy <strong>Good Boy</strong> how are you</p>
+        <button onclick="replace()">ChangeConsole</button>
+        <hr>
+        <h1>on click event</h1>
+        <img src="car.webp" id="photo" width="150px" height="200px"> <br>
+        <button onclick="photo()">Change Photo</button>
+        <hr>
+         <h1> Onmouseover,Onmouseout,Onfocus,Onload</h1>
+         <p onmouseover="onmouse()" onmouseout="onmouse()" id="mouse"> Hai da velu paiya how are u da pangu </p>
+         <input type="text" id="focus" onfocus="onmouse()">
+         <hr>
+
+
+    </body>
+</html>
